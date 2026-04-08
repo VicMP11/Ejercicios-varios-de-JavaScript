@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <p id="resultado">Racismo</p>
+    <button id="btn" onclick="ocultarTexto()">Ocultar</button>
+</body>
+<script>
+    let visible = true 
+    function ocultarTexto() {
+        let parrafo = document.getElementById("resultado")
+        let boton = document.getElementById("btn")
+        if (visible) {
+            resultado.style.display = "none"
+            boton.innerHTML = "Mostrar"
+            visible = false
+        } else {
+            resultado.style.display = "block"
+            boton.innerHTML = "Ocultar"
+            visible = true
+        }
+    }
+</script>
+</html>

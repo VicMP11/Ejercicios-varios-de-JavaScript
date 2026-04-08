@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <button id="btn" onclick="contarClics()">Boton</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    let contador = 0
+    function contarClics() {
+        let resultado = document.getElementById("resultado")
+        contador = contador + 1
+        resultado.innerHTML = contador
+    }
+</script>
+</html>

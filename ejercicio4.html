@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <button id="btn" onclick="mostrarHora()">Boton</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function mostrarHora() {
+        let resultado = document.getElementById("resultado")
+        const ahora = new Date()
+        const hora = ahora.toLocaleTimeString()
+        resultado.innerHTML = hora
+    }
+</script>
+</html>

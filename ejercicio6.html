@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button id="btn" onclick="sumarInputs()">Boton</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function sumarInputs() {
+        const a = Number (document.getElementById("num1").value)
+        const b = Number (document.getElementById("num2").value)
+        let suma = a + b
+        let resultado = document.getElementById("resultado")
+        resultado.innerHTML = "La suma es: " + suma 
+    }
+</script>
+</html>
