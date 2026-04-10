@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id="btn" onclick="añadirLista()">Boton</button>
+    <ul id="lista"></ul>
+</body>
+<script>
+    function añadirLista() {
+        const lista = document.getElementById("lista")
+        const input = document.getElementById("input")
+        const texto = input.value
+        lista.innerHTML = lista.innerHTML + "<li>" + texto + "</li>"
+        input.value = ""
+    }
+</script>
+</html>

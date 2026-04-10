@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .circulo {
+            background-color: gray;
+            width: 100px;
+            height: 100px;
+            border-radius: 80px;
+            margin: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="rojo" class="circulo"></div>
+    <div id="amarillo" class="circulo"></div>
+    <div id="verde" class="circulo"></div>
+    <button id="btn" onclick="cambiarColor()">Siguiente</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    let estado = 0
+    const resultado = document.getElementById("resultado")
+    function cambiarColor() {
+        const estados = ["rojo", "amarillo", "verde"]
+        const textos = ["Stop", "Atencion", "Adelante"]
+        const rojo = document.getElementById("rojo")
+        const amarillo = document.getElementById("amarillo")
+        const verde = document.getElementById("verde")
+        estado = (estado + 1) % 3
+        resultado.innerHTML = textos[estado]
+
+        rojo.style.backgroundColor = "gray"
+        amarillo.style.backgroundColor = "gray"
+        verde.style.backgroundColor = "gray"
+        if (estado === 0) {
+            rojo.style.backgroundColor = "red"
+        } else if (estado === 1) {
+            amarillo.style.backgroundColor = "yellow"
+        } else if (estado === 2) {
+            verde.style.backgroundColor = "green"
+        }
+    }
+</script>
+
+</html>
